@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="096e5ee3-875b-4b84-8beb-4b7eab19e884" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchTime/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchTime/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchTime/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchTime/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchTime/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchTime/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/item/miniLegoVar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/item/miniLegoVar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/__Script/UI/Timer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Script/ScriptableModel/IStorable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Script/ScriptableModel/ScriptableModelsLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneReolader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Script/Models/PlayerScriptableModelProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Script/Models/PlayerModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Script/ScriptableModel/ScriptableModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Script/Models/PlayerScriptableModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Script/UI/ScorePresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Script/scoreItem.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/__Script/Models/PlayerScriptableModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/ScriptableModel/IStorable.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/ScriptableModel/ScriptableModelsLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/Models/PlayerModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/UI/ScorePresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/ScriptableModel/ScriptableModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/Models/PlayerScriptableModelProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/ScriptableModel/Model.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/UI/Timer.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/itemHideFX.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/ScoreHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/FXPool/VFXPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneReolader.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/SceneChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/scoreItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/__Script/Getter.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2EnnMHYxI5xAdm1wLorun9ur83Z" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="096e5ee3-875b-4b84-8beb-4b7eab19e884" name="Default Changelist" comment="" />
+      <created>1663240189103</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663240189103</updated>
+      <workItem from="1663240264836" duration="7182000" />
+      <workItem from="1663323096611" duration="4045000" />
+      <workItem from="1663399756353" duration="20933000" />
+      <workItem from="1663484415723" duration="799000" />
+      <workItem from="1664113035110" duration="7592000" />
+      <workItem from="1664200627234" duration="3948000" />
+      <workItem from="1664269628619" duration="2829000" />
+      <workItem from="1664295381979" duration="754000" />
+      <workItem from="1664891803769" duration="93000" />
+      <workItem from="1666461215531" duration="1362000" />
+      <workItem from="1673633013312" duration="909000" />
+      <workItem from="1705506363149" duration="38000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="827" y="370" key="RiderGenerateDialog" timestamp="1663438466045">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="827" y="370" key="RiderGenerateDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1663438466045" />
+    <state x="1053" y="157" width="829" height="801" key="find.popup" timestamp="1663425086170">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1053" y="157" width="829" height="801" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1663425086170" />
+  </component>
+</project>
