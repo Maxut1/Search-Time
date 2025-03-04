@@ -123,7 +123,9 @@ namespace SortItems
             
             surprise,
             
-            Lego
+            Lego,
+
+            bluelego
         }
 
 }

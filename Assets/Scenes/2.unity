@@ -2956,6 +2956,15 @@ MonoBehaviour:
   - getter: {fileID: 5096817312250806872}
     targetCount: 1
     count: 0
+  - getter: {fileID: 5096817312250806872}
+    targetCount: 1
+    count: 0
+  - getter: {fileID: 5096817312250806872}
+    targetCount: 1
+    count: 0
+  - getter: {fileID: 5096817312250806872}
+    targetCount: 1
+    count: 0
   onFull:
     m_PersistentCalls:
       m_Calls: []

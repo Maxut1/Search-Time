@@ -1483,7 +1483,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0/1
+  m_Text: 0/3
 --- !u!222 &1046993342
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3032,7 +3032,7 @@ MonoBehaviour:
   ObjectActive: {fileID: 363779767}
   _getters:
   - getter: {fileID: 5096817312250806872}
-    targetCount: 1
+    targetCount: 5
     count: 0
   onFull:
     m_PersistentCalls:
@@ -3386,8 +3386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b33091d12441448db7c8ddc223497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 8805338041040172358, guid: 436cf968ca9c0284fa2bc79d7af55a12, type: 3}
-  _count: 5
+  _prefab: {fileID: 6832389400650635850, guid: af5a20a24958d43e3846d6fbb126543b, type: 3}
+  _count: 10
   _range: {x: 3, y: 2, z: 4}
 --- !u!4 &3717302383683128995
 Transform:
@@ -3773,7 +3773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d0b65adc5e83e4cab034bf3f74421c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 5
   onCountChanget:
     m_PersistentCalls:
       m_Calls: []
