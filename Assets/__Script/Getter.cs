@@ -125,7 +125,9 @@ namespace SortItems
             
             Lego,
 
-            bluelego
+            bluelego,
+
+            pumpkin
         }
 
 }

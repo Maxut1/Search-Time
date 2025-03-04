@@ -2954,16 +2954,7 @@ MonoBehaviour:
   ObjectActive: {fileID: 363779767}
   _getters:
   - getter: {fileID: 5096817312250806872}
-    targetCount: 1
-    count: 0
-  - getter: {fileID: 5096817312250806872}
-    targetCount: 1
-    count: 0
-  - getter: {fileID: 5096817312250806872}
-    targetCount: 1
-    count: 0
-  - getter: {fileID: 5096817312250806872}
-    targetCount: 1
+    targetCount: 5
     count: 0
   onFull:
     m_PersistentCalls:
@@ -3597,7 +3588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 7467795432678672250, guid: bd645f3a4686eab43ba8196f69b7a72d, type: 3}
-  _count: 3
+  _count: 5
   _range: {x: 3, y: 2, z: 4}
 --- !u!4 &4891275198461329079
 Transform:
