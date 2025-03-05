@@ -127,7 +127,13 @@ namespace SortItems
 
             bluelego,
 
-            pumpkin
+            pumpkin,
+
+            burger,
+
+            frenchfries,
+
+            pepsi
         }
 
 }
