@@ -133,7 +133,17 @@ namespace SortItems
 
             frenchfries,
 
-            pepsi
+            pepsi,
+
+            mashina,
+
+            sculptura,
+
+            napoleon,
+
+            kniga,
+
+            iphone
         }
 
 }
