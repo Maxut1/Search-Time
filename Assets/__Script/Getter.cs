@@ -143,7 +143,17 @@ namespace SortItems
 
             kniga,
 
-            iphone
+            iphone,
+
+            cybertrack,
+
+            guitar,
+
+            nlo,
+
+            coleso,
+
+            medal
         }
 
 }
