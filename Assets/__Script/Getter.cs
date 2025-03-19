@@ -153,7 +153,17 @@ namespace SortItems
 
             coleso,
 
-            medal
+            medal,
+
+            spider,
+            
+            monster,
+
+            ghost,
+
+            lion,
+
+            mouse
         }
 
 }
