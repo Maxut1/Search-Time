@@ -163,7 +163,9 @@ namespace SortItems
 
             lion,
 
-            mouse
+            mouse,
+
+            pc
         }
 
 }
