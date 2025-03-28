@@ -165,7 +165,17 @@ namespace SortItems
 
             mouse,
 
-            pc
+            pc,
+
+            axebass,
+
+            bluecar,
+
+            Bbg,
+
+            glasses,
+
+            Hant
         }
 
 }
