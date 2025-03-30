@@ -175,7 +175,23 @@ namespace SortItems
 
             glasses,
 
-            Hant
+            Hant,
+
+            glassesheart,
+
+            ssn,
+
+            goblin,
+
+            ponchik,
+
+            nozh,
+
+            sword,
+
+            tabletka,
+
+            poduskageart
         }
 
 }
