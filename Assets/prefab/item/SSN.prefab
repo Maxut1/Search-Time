@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 36bd9a4d47b58394eb3741582f4b40b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36bd9a4d47b58394eb3741582f4b40b3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36bd9a4d47b58394eb3741582f4b40b3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36bd9a4d47b58394eb3741582f4b40b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -80,6 +92,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36bd9a4d47b58394eb3741582f4b40b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7648089820757272142}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36bd9a4d47b58394eb3741582f4b40b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4769729653748212151}
   m_SourcePrefab: {fileID: 100100000, guid: 36bd9a4d47b58394eb3741582f4b40b3, type: 3}
 --- !u!4 &4876184771311378180 stripped
 Transform:
@@ -442,6 +457,27 @@ MonoBehaviour:
   optionalRotationMode: 0
   optionalScrambleMode: 0
   optionalString: 
+--- !u!65 &-4769729653748212151
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5251303382129264062}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0007991999, y: 0.00063919986, z: 0.0021801593}
+  m_Center: {x: -0.00000042647298, y: 0.0000032730306, z: 0.00040908012}
 --- !u!23 &6044003230062535787 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 36bd9a4d47b58394eb3741582f4b40b3, type: 3}

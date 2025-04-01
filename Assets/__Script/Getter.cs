@@ -191,7 +191,13 @@ namespace SortItems
 
             tabletka,
 
-            poduskageart
+            poduskageart,
+
+            minilegober,
+
+            longlegoblue,
+
+            cubelegoblue
         }
 
 }
