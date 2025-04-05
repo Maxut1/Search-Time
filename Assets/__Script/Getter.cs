@@ -91,24 +91,30 @@ namespace SortItems
             }
         }
 
-        private void TryGetItem()
+private void TryGetItem()
+{
+    if (_item.Type == type)
+    {
+        count++;
+
+        if (count >= targetCount)
         {
-            if(_item.Type == type)
-            {
-                //Destroy(_item.gameObject);
-                count++;
-
-                if (count >= targetCount)
-                {
-                    _Material.color = Color.gray;
-                    active = false;
-                }
-                onCountChanget.Invoke(this);
-                
-                _item.OnHideRequest.Invoke();
-
-            }
+            _Material.color = Color.gray;
+            active = false;
         }
+        
+        onCountChanget.Invoke(this);
+        
+        // Проверяем, если собранный предмет соответствует текущему целевому типу
+        if (count >= targetCount && type == FindObjectOfType<ItemSpawner>().GetCurrentTargetType())
+        {
+            // Здесь можно добавить логику завершения уровня или перехода к следующему этапу
+            Debug.Log("Все предметы собраны!");
+        }
+
+        _item.OnHideRequest.Invoke();
+    }
+}
         
 
     }
