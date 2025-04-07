@@ -6,36 +6,78 @@ namespace SortItems
 {
     public class ItemsSpawn : MonoBehaviour
     {
-        [SerializeField] private GameObject[] _prefabs; // Массив префабов
-        [SerializeField] private Vector3 _range; // Диапазон спавна
+        [SerializeField] private GameObject[] _prefabs; // Массив префабов для обычных предметов
+        [SerializeField] private GameObject[] _targetPrefabs; // Массив префабов для целевых предметов
+        [SerializeField] private Vector3 _spawnRange; // Диапазон спавна
 
-        public void SpawnItems(ItemType itemType, int count)
+        private ItemType _currentTargetType;
+        private Getter _currentGetter;  // Ссылка на объект Getter, чтобы передать тип предмета
+
+        private void Start()
         {
-            for (int i = 0; i < count; i++)
+            // Спавним предметы
+            SpawnItems();
+            // Устанавливаем случайный целевой предмет
+            SetRandomTargetItem();
+        }
+
+        private void SpawnItems()
+        {
+            int spawnCount = Random.Range(15, 31); 
+
+            for (int i = 0; i < spawnCount; i++)
             {
-                // Находим префаб по типу предмета
-                GameObject prefabToSpawn = GetPrefabByType(itemType);
-                if (prefabToSpawn != null)
+                int randomIndex = Random.Range(0, _prefabs.Length);
+                Vector3 offset = new Vector3(Random.Range(-_spawnRange.x, _spawnRange.x), 
+                                              Random.Range(-_spawnRange.y, _spawnRange.y), 
+                                              Random.Range(-_spawnRange.z, _spawnRange.z));
+                
+                Instantiate(_prefabs[randomIndex], transform.position + offset, Quaternion.identity);
+            }
+        }
+
+        private void SetRandomTargetItem()
+        {
+            if (_targetPrefabs.Length == 0)
+            {
+                Debug.LogError("Массив целевых префабов пуст!");
+                return;
+            }
+
+            // Случайно выбираем один из целевых префабов
+            int targetPrefabIndex = Random.Range(0, _targetPrefabs.Length);
+            
+            // Используем Raycast для определения позиции спавна
+            RaycastHit hit;
+            if (Physics.Raycast(new Vector3(0.72f, 10f, -14.53f), Vector3.down, out hit))
+            {
+                Vector3 spawnPosition = hit.point + new Vector3(0, 1f, 0); // Спавн выше поверхности
+                
+                GameObject targetItemInstance = Instantiate(_targetPrefabs[targetPrefabIndex], spawnPosition, Quaternion.identity);
+                
+                // Получаем тип текущего целевого предмета
+                _currentTargetType = targetItemInstance.GetComponent<DragItem>().Type;
+
+                targetItemInstance.name = "Target Item: " + _currentTargetType.ToString(); // Установите имя для удобства
+                
+                Debug.Log("Спавн целевого предмета: " + targetItemInstance.name + " на позиции: " + spawnPosition);
+                
+                // Передаем тип в Getter (если он существует)
+                if (_currentGetter != null)
                 {
-                    Vector3 offset = new Vector3(Random.Range(-_range.x, _range.x), 
-                                                  Random.Range(-_range.y, _range.y), 
-                                                  Random.Range(-_range.z, _range.z));
-                    Instantiate(prefabToSpawn, transform.position + offset, Quaternion.identity, transform);
+                    _currentGetter.SetTargetItemType(_currentTargetType);
                 }
             }
         }
 
-        private GameObject GetPrefabByType(ItemType type)
+        public void SetCurrentGetter(Getter getter)
         {
-            foreach (var prefab in _prefabs)
-            {
-                DragItem dragItem = prefab.GetComponent<DragItem>();
-                if (dragItem != null && dragItem.Type == type)
-                {
-                    return prefab;
-                }
-            }
-            return null; // Если не найдено
+            _currentGetter = getter;  // Устанавливаем ссылку на Getter
+        }
+
+        public ItemType GetCurrentTargetType()
+        {
+            return _currentTargetType;
         }
     }
 }

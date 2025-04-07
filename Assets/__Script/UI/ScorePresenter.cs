@@ -12,13 +12,15 @@ namespace SortItems
 
         public TMP_Text ScoreText => _scoreText;
 
+        // Используем 'new' для явного скрытия метода OnEnable из родительского класса
         protected new void OnEnable()
         {
             base.OnEnable();
             PlayerScriptableModel.OnLoad.AddListener(UpdateScore);
         }
 
-        protected void OnDisable()
+        // Используем 'new' для явного скрытия метода OnDisable из родительского класса
+        protected new void OnDisable()
         {
             base.OnDisable();
             PlayerScriptableModel.OnLoad.RemoveListener(UpdateScore);
@@ -26,9 +28,7 @@ namespace SortItems
 
         public void UpdateScore()
         {
-            ScoreText.text = PlayerScriptableModel.Model.Score.ToString();
+            ScoreText.text = PlayerScriptableModel.Model.Score.ToString(); // Обновляем текст на экране
         }
     }
 }
-
-

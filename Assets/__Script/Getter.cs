@@ -1,9 +1,5 @@
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
 
 namespace SortItems
 {
@@ -14,12 +10,15 @@ namespace SortItems
         private Material _Material;
         private Color _defaulColor;
 
-
         private int targetCount = 1;
         private int count = 0;
         private bool active = true;
 
         public UnityEvent<Getter> onCountChanget;
+
+        // Публичные методы для доступа к private полям
+        public int GetCount() => count;
+        public int GetTargetCount() => targetCount;
 
         public void SetCount(int value)
         {
@@ -32,7 +31,6 @@ namespace SortItems
             }
         }
 
-
         private void Start() 
         {
             _Material = GetComponent<MeshRenderer>().material;
@@ -41,7 +39,7 @@ namespace SortItems
 
         private void OnTriggerStay(Collider other)
         {
-            if(!active)
+            if (!active)
                 return;
 
             var item = other.attachedRigidbody.GetComponent<DragItem>();
@@ -50,7 +48,7 @@ namespace SortItems
             {
                 _item = item;
 
-                if(_item.Type == type)
+                if (_item.Type == type)
                 {
                     _Material.color = Color.green;
                 }
@@ -69,143 +67,54 @@ namespace SortItems
                 _Material.color = _defaulColor;
                 return;
             }
-            
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if(!active)
+            if (!active)
                 return;
 
             var item = other.attachedRigidbody.GetComponent<DragItem>();
             if (_item == item)
             {
-               _Material.color = _defaulColor;
-               
+                _Material.color = _defaulColor;
+
                 if (item.isDraggable == false)
                 {
                     TryGetItem();
                 }
                 _item = null;
-
             }
         }
 
-private void TryGetItem()
-{
-    if (_item.Type == type)
-    {
-        count++;
-
-        if (count >= targetCount)
+        private void TryGetItem()
         {
-            _Material.color = Color.gray;
-            active = false;
-        }
-        
-        onCountChanget.Invoke(this);
-        
-        // Проверяем, если собранный предмет соответствует текущему целевому типу
-        if (count >= targetCount && type == FindObjectOfType<ItemSpawner>().GetCurrentTargetType())
-        {
-            // Здесь можно добавить логику завершения уровня или перехода к следующему этапу
-            Debug.Log("Все предметы собраны!");
+            if (_item.Type == type)
+            {
+                count++;
+
+                if (count >= targetCount)
+                {
+                    _Material.color = Color.gray;
+                    active = false;
+                }
+
+                onCountChanget.Invoke(this);
+
+                // Проверяем, если собранный предмет соответствует текущему целевому типу
+                if (count >= targetCount && type == FindObjectOfType<ItemSpawner>().GetCurrentTargetType())
+                {
+                    Debug.Log("Все предметы собраны!");
+                }
+
+                _item.OnHideRequest.Invoke();
+            }
         }
 
-        _item.OnHideRequest.Invoke();
+        // Метод для обновления типа целевого предмета в Getter
+        public void SetTargetItemType(ItemType targetType)
+        {
+            type = targetType;
+        }
     }
 }
-        
-
-    }
-
-        public enum ItemType
-        {
-            CubeLego,
-
-            miniLego,
-
-            LongLego,
-            
-            surprise,
-            
-            Lego,
-
-            bluelego,
-
-            pumpkin,
-
-            burger,
-
-            frenchfries,
-
-            pepsi,
-
-            mashina,
-
-            sculptura,
-
-            napoleon,
-
-            kniga,
-
-            iphone,
-
-            cybertrack,
-
-            guitar,
-
-            nlo,
-
-            coleso,
-
-            medal,
-
-            spider,
-            
-            monster,
-
-            ghost,
-
-            lion,
-
-            mouse,
-
-            pc,
-
-            axebass,
-
-            bluecar,
-
-            Bbg,
-
-            glasses,
-
-            Hant,
-
-            glassesheart,
-
-            ssn,
-
-            goblin,
-
-            ponchik,
-
-            nozh,
-
-            sword,
-
-            tabletka,
-
-            poduskageart,
-
-            minilegober,
-
-            longlegoblue,
-
-            cubelegoblue
-        }
-
-}
-
-

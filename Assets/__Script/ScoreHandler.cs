@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,57 +5,43 @@ namespace SortItems
 {
     public class ScoreHandler : MonoBehaviour
     {
-        public scoreItem Score;
+        [SerializeField] private Getter[] _getters; // Ссылка на объекты Getter
         [SerializeField] private GameObject ObjectDiactiv;
         [SerializeField] private GameObject ObjectActive;
-        [SerializeField] private GetterParameters[] _getters;
-        public UnityEvent onFull; 
+
+        public UnityEvent onFull;
+
         private void Start()
         {
-            if (_getters == null)
+            if (_getters == null || _getters.Length == 0)
             {
                 return;
             }
+
             foreach (var getter in _getters)
             {
-                getter.getter.SetCount(getter.targetCount);
-                getter.getter.onCountChanget.AddListener(OnCountChanget);
+                getter.SetCount(getter.GetTargetCount());  // Используем GetTargetCount вместо direct доступа
+                getter.onCountChanget.AddListener(OnCountChanget);
             }
-
         }
 
         private void OnDestroy()
         {
             foreach (var getter in _getters)
             {
-                getter.getter.onCountChanget.RemoveListener(OnCountChanget);
+                getter.onCountChanget.RemoveListener(OnCountChanget);
             }
         }
-        
 
         private void OnCountChanget(Getter getter)
         {
-            for (int idx = 0; idx < _getters.Length; idx++)
+            bool full = true;
+
+            foreach (var item in _getters)
             {
-                ref var item = ref _getters[idx];
-
-                if (item.getter != getter)
-                {
-                    continue;
-                }
-
-                 item.count++; 
-                 Score.AddScore();
-            }
-
-             bool full = true;
-
-            foreach (GetterParameters item in _getters)
-            {
-                if (item.count < item.targetCount)
+                if (item.GetCount() < item.GetTargetCount()) // Используем GetCount
                 {
                     full = false;
-
                     break;
                 }
             }
@@ -66,19 +50,8 @@ namespace SortItems
             {
                 ObjectDiactiv.SetActive(false);
                 ObjectActive.SetActive(true);
-               // onFull.Invoke();
+                onFull.Invoke();
             }
         }
     }
-
-        [System.Serializable]
-        public struct GetterParameters
-        {
-            public Getter getter;
-            public int targetCount;
-            [HideInInspector]public int count;
-            
-        }
-
 }
-

@@ -8,24 +8,30 @@ namespace SortItems
     public class TaskManager : MonoBehaviour
     {
         [SerializeField] private ItemType[] itemTypes; // Массив типов предметов
-        [SerializeField] private ItemsSpawn itemsSpawn; // Ссылка на ваш ItemsSpawn
+        [SerializeField] private ItemSpawner itemSpawner; // Ссылка на ваш ItemSpawner
         [SerializeField] private Text taskText; // UI элемент для отображения задания
 
         private ItemType currentItemType;
 
         private void Start()
         {
-            SetNewTask();
+            SetNewTask(); // Запуск задания при старте
         }
 
+        // Метод для установки нового задания
         public void SetNewTask()
         {
             // Выбираем случайный тип предмета
             currentItemType = itemTypes[Random.Range(0, itemTypes.Length)];
-            taskText.text = "Соберите 5 " + currentItemType.ToString(); // Обновляем текст задания
+            
+            // Выводим задание в консоль и UI
+            string taskDescription = "Соберите 5 " + currentItemType.ToString();
+            Debug.Log(taskDescription); // Выводим текст задания в консоль
+            taskText.text = taskDescription; // Обновляем текст на UI
 
             // Спавним 5 предметов этого типа
-            itemsSpawn.SpawnItems(currentItemType, 5);
+            string currentTag = currentItemType.ToString(); // Преобразуем тип в строку для тега
+            itemSpawner.SpawnItems(currentItemType, 5);
         }
     }
 }
