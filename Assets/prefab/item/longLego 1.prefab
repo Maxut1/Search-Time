@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upForce: 0
-  _type: 2
+  _type: 40
   OnHideRequest:
     m_PersistentCalls:
       m_Calls:
